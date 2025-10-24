@@ -15,9 +15,7 @@ services:
   backend:
     image: nikhilsivakoti/docker-backend:latest
     container_name: springboot
-    build:
-      context: ./Backend-mm-d
-      dockerfile: ../fullstack/backend.Dockerfile
+    
     ports:
       - "8099:8099"
     depends_on:
@@ -29,9 +27,7 @@ services:
   frontend:
     image: nikhilsivakoti/docker-frontend:latest
     container_name: react
-    build:
-      context: ./frontend-mm-d
-      dockerfile: ../fullstack/frontend.Dockerfile
+   
     ports:
       - "5173:80"
     depends_on:
